@@ -1,0 +1,70 @@
+main {
+  flex: 1 0 auto;
+}
+
+/* Smooth page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Container spacing */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 1rem;
+}
+
+/* Grid gutters */
+.row {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.row > [class*="col-"] {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Gradient overlays */
+.section-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(208, 240, 192, 0.3), transparent);
+  animation: sectionShimmer 8s infinite;
+  pointer-events: none;
+}
+
+@keyframes sectionShimmer {
+  0% { transform: translateX(-30%); }
+  50% { transform: translateX(30%); }
+  100% { transform: translateX(-30%); }
+}

@@ -1,0 +1,75 @@
+.customer-dash {
+  min-height: calc(100vh - 200px);
+}
+
+.customer-dash .welcome-section {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.customer-dash .stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.customer-dash .stat-card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(44, 85, 48, 0.1);
+}
+
+.customer-dash .nav-tabs {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.customer-dash .nav-tabs .nav-link {
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.customer-dash .nav-tabs .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+  transition: width 0.3s ease;
+}
+
+.customer-dash .nav-tabs .nav-link.active::after {
+  width: 80%;
+}
+
+.customer-dash .nav-tabs .nav-link:hover::after {
+  width: 40%;
+}
+
+.customer-dash .quick-action-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  color: var(--color-text);
+}
+
+.customer-dash .quick-action-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 85, 48, 0.1);
+}

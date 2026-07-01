@@ -1,0 +1,76 @@
+.business-dash {
+  min-height: calc(100vh - 200px);
+}
+
+.business-dash .stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.business-dash .stat-card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(44, 85, 48, 0.15);
+}
+
+.business-dash .stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.business-dash .nav-tabs {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.business-dash .nav-tabs .nav-link {
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.business-dash .nav-tabs .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.business-dash .nav-tabs .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.business-dash .nav-tabs .nav-link:hover::after {
+  transform: scaleX(0.5);
+}
+
+.business-dash .quick-action-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  color: var(--color-text);
+}
+
+.business-dash .quick-action-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 85, 48, 0.1);
+}
